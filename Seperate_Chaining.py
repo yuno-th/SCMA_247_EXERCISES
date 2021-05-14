@@ -1,3 +1,5 @@
+#6105018_Yuno
+
 import matplotlib.pyplot as plt
 
 
@@ -83,7 +85,7 @@ class SeperateChaining:
         self.size = newChain.length();
         self.table = newChain.table;
 
-n = 1000;
+n = 1000; # try n about 100000
 h = SeperateChaining();
 for i in range(n):
     h.put(i,i);
@@ -101,6 +103,6 @@ for i in range(n):
     if(not i in arr): print(i,"RIP");
 print("ArrayList is OK");
 
-h.display();
+h.display(); #if you try n about 100000 plese comment this line.
 
 
