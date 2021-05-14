@@ -1,7 +1,9 @@
+# 6105018_Yuno
 #Require these libraries.
 import matplotlib.pyplot as plt 
 import sympy; 
 
+#Linear Probing.
 class OAHashTable:
     class Entry:
        def __init__(self,k,v):
@@ -83,7 +85,7 @@ class OAHashTable:
             if(entry != None and entry != self.DELETE):
                 self.put(entry.key,entry.value)
     
-
+#Quardratic Probing.
 class OAQDHashTable:
     class Entry:
        def __init__(self,k,v):
@@ -167,6 +169,7 @@ class OAQDHashTable:
             if(entry != None and entry != self.DELETE):
                 self.put(entry.key,entry.value)
 
+#Double Hashing
 class OADBHashTable:
     class Entry:
        def __init__(self,k,v):
@@ -260,7 +263,7 @@ class OADBHashTable:
 h2 = OAHashTable();
 h3 = OAQDHashTable();
 h4 = OADBHashTable()
-n = 1000;
+n = 1000; #if n = 1000000 the performance between hash table and array will be shown.
 
 
 for i in range(n):
@@ -291,6 +294,7 @@ for i in range(n):
     if(not i in arr): print(i,"RIP");
 print("ArrayList is OK");
 
+# If use n > 1000 please comment this code.
 h2.display();
 h3.display();
 h4.display();
